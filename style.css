@@ -31,3 +31,42 @@
 .admin-table td{color:#d1dbea}
 .admin-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
 @media(max-width:600px){.event-status-tabs{gap:6px}.status-tab{flex:1;padding:9px 7px;font-size:9px}.admin-event-head{align-items:flex-start;flex-direction:column}}
+/* EVENTHUB – Digital Pass QR Design */
+#passQr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 16px;
+}
+
+#passQr canvas,
+#passQr img {
+    display: block;
+    margin: 0 auto;
+    width: 210px !important;
+    height: 210px !important;
+    padding: 8px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+/* Keep the pass details neatly aligned */
+#passDetails {
+    width: 100%;
+    text-align: left;
+}
+
+.pass-meta {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 22px;
+    background: #ffffff;
+    color: #10213d;
+    border-radius: 14px;
+    line-height: 2;
+}
