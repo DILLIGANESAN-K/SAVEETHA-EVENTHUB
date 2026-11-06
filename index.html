@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07152f">
+<meta name="description" content="SAVEETHA PULSE — the campus event experience for Saveetha Engineering College.">
+<title>SAVEETHA ENGINEERING COLLEGE | by EVENTHUB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<header class="topbar">
+  <a class="brand" href="#home"><img src="assets/college-emblem.png" alt="Saveetha Engineering College emblem"><span><b>SAVEETHA ENGINEERING COLLEGE</b><small>BY EVENTHUB</small></span></a>
+  <nav id="mainNav"><a href="#home">Home</a><a href="#events">Discover events</a><a href="#moments">Campus moments</a><a href="#about">About</a></nav>
+  <div class="nav-actions"><button class="btn btn-outline" id="openAuth">Login <span>↗</span></button><button class="btn btn-gold" id="openDashboard" hidden>My dashboard</button><button class="btn btn-outline" id="signOut" hidden>Sign out</button></div>
+  <button class="menu" id="menuBtn" aria-label="Toggle navigation">☰</button>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-image"></div><div class="hero-overlay"></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+  <div class="hero-content reveal">
+    <div class="eyebrow"><span class="pulse-dot"></span> THE CAMPUS EXPERIENCE, REIMAGINED</div>
+    <h1>Where campus<br>life <em>comes alive.</em></h1>
+    <p>Discover the energy of Saveetha. Find events, meet your people, make memories and step into every moment happening across campus.</p>
+    <div class="hero-actions"><a class="btn btn-gold btn-large" href="#events">Explore events <span>↗</span></a><button class="btn btn-glass btn-large" id="heroJoin">Join the community</button></div>
+    <div class="hero-proof"><span class="proof-line"></span><span>THANDALAM · CHENNAI</span><span class="proof-dot">✦</span><span>EST. 2001</span></div>
+  </div>
+  <div class="hero-side-note">LEARN&nbsp; · &nbsp;CREATE&nbsp; · &nbsp;CELEBRATE</div>
+  <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="scroll-mark">↓</span></div>
+</section>
+
+<section class="welcome section-wrap" id="about">
+ <div class="welcome-brand"><img src="assets/college-wordmark.png" alt="Saveetha Engineering College — Autonomous"></div>
+ <div class="welcome-copy"><span class="kicker">ONE CAMPUS. MANY STORIES.</span><h2>Every moment has<br>a place <em>here.</em></h2><p>From bold technical ideas to unforgettable cultural celebrations, SAVEETHA PULSE brings the campus calendar into one beautiful place.</p><a class="inline-link" href="#moments">Explore campus moments <span>↗</span></a></div>
+</section>
+
+<section class="events-section section-wrap" id="events">
+ <div class="section-heading"><div><span class="kicker">THE CAMPUS CALENDAR</span><h2>Find your next <em>big moment.</em></h2></div><p>Explore published events and register securely with your student account.</p></div>
+ <div class="event-status-tabs"><button class="status-tab active" data-status="upcoming">Upcoming</button><button class="status-tab" data-status="ongoing">Ongoing</button><button class="status-tab" data-status="past">Past events</button><button class="status-tab" data-status="all">All events</button></div><div class="event-toolbar"><div class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Search events, categories or venues…"></div><select id="categoryFilter"><option value="all">All categories</option><option>Technical</option><option>Hackathon</option><option>Workshop</option><option>Cultural</option><option>Sports</option><option>Seminar</option><option>Festival</option></select><span class="live-label"><i></i> LIVE EVENT LIST</span></div>
+ <div class="event-grid" id="eventGrid"><div class="loading-card">Connect Supabase to load published events.</div></div><p class="empty" id="emptyState" hidden>No published events match your search.</p>
+</section>
+
+<section class="moments-section section-wrap" id="moments">
+ <div class="section-heading"><div><span class="kicker">A CAMPUS FULL OF LIFE</span><h2>Moments worth <em>showing up for.</em></h2></div><p>Celebrations, competitions and creative energy — the many colours of campus life.</p></div>
+ <div class="poster-grid">
+  <article class="poster-card poster-large"><img src="assets/hostel-fest.png" alt="Hostel Fest — Bonds Beyond Boundaries"><div class="poster-caption"><span>COMMUNITY</span><h3>Hostel Fest</h3></div></article>
+  <article class="poster-card"><img src="assets/smart-india-hackathon-2026.png" alt="Smart India Hackathon 2026"><div class="poster-caption"><span>INNOVATION</span><h3>Smart India Hackathon</h3></div></article>
+  <article class="poster-card"><img src="assets/celenza-cultural-night.png" alt="Celenza dance music culture"><div class="poster-caption"><span>CULTURE</span><h3>Celenza</h3></div></article>
+  <article class="poster-card"><img src="assets/hackathon.png" alt="Saveetha Hackathon"><div class="poster-caption"><span>TECHNOLOGY</span><h3>Hackathon</h3></div></article>
+ </div>
+ <div class="festival-strip">
+  <div class="festival-intro"><span class="kicker">CELEBRATE TOGETHER</span><h3>Festivals that<br><em>bring us closer.</em></h3></div>
+  <div class="festival-thumbs"><img src="assets/diwali.png" alt="Diwali"><img src="assets/pongal.png" alt="Pongal"><img src="assets/onam.png" alt="Onam"><img src="assets/christmas.png" alt="Christmas"><img src="assets/ramadan-mubarak.png" alt="Ramadan"></div>
+ </div>
+</section>
+
+<section class="cta-band"><div class="cta-glow"></div><div><span class="kicker">YOUR CAMPUS. YOUR MOMENT.</span><h2>Don't just hear about it.<br><em>Be part of it.</em></h2></div><button class="btn btn-gold btn-large" id="bannerJoin">Get started <span>↗</span></button></section>
+</main>
+<footer><a class="brand footer-brand" href="#home"><img src="assets/college-emblem.png" alt=""><span><b>SAVEETHA ENGINEERING COLLEGE</b><small>BY EVENTHUB</small></span></a><p>Built for the moments that bring us together.</p><span>© 2026 SAVEETHA ENGINEERING COLLEGE</span></footer>
+
+<div class="modal" id="authModal" role="dialog" aria-modal="true"><div class="modal-card"><button class="close" data-close="authModal">×</button><span class="kicker">STUDENT & ADMIN ACCESS</span><h2>Welcome <em>back.</em></h2><p class="modal-copy">Students can use any valid email address. Administrators can sign in with their username or linked email.</p><div class="tabs"><button class="tab active" data-tab="login">Login</button><button class="tab" data-tab="signup">Create account</button></div>
+<form id="loginForm" class="auth-form"><label>Email or admin username<input name="email" type="text" required autocomplete="username" placeholder="you@example.com or EVENTHUBadmin"></label><label>Password<input name="password" type="password" required autocomplete="current-password"></label><button class="btn btn-gold submit">Login securely ↗</button><button type="button" class="text-button" id="forgotPassword">Forgot password?</button></form>
+<form id="signupForm" class="auth-form" hidden><label>Full name<input name="full_name" required></label><label>Email address<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label><label>Register number<input name="register_number" required></label><div class="form-row"><label>Department<input name="department" required></label><label>Academic year<select name="academic_year" required><option value="">Select</option><option>1</option><option>2</option><option>3</option><option>4</option></select></label></div><div class="form-row"><label>Section<input name="section" required></label><label>Phone number<input name="phone_number" type="tel" required></label></div><label>Password<input name="password" type="password" minlength="10" required></label><label>Confirm password<input name="confirm_password" type="password" minlength="10" required></label><button class="btn btn-gold submit">Create student account ↗</button></form><p class="form-message" id="authMessage"></p></div></div>
+<div class="modal" id="dashboardModal" role="dialog" aria-modal="true"><div class="modal-card wide"><button class="close" data-close="dashboardModal">×</button><span class="kicker">YOUR CAMPUS SPACE</span><h2>Student <em>dashboard.</em></h2><div id="dashboardContent">Loading your profile…</div></div></div>
+<div class="modal" id="eventModal" role="dialog" aria-modal="true"><div class="modal-card"><button class="close" data-close="eventModal">×</button><span class="kicker">EVENT DETAILS</span><h2 id="eventTitle"></h2><p id="eventDescription" class="modal-copy"></p><div id="eventMetadata" class="event-detail"></div><div id="bookingConfirmation" class="booking-confirmation" hidden></div><button class="btn btn-gold submit" id="registerEvent">Confirm registration ↗</button><p id="eventMessage" class="form-message"></p></div></div>
+<div class="modal" id="passModal" role="dialog" aria-modal="true"><div class="modal-card pass-card"><button class="close" data-close="passModal">×</button><span class="kicker">SAVEETHA ENGINEERING COLLEGE · EVENTHUB</span><h2>Digital <em>entry pass.</em></h2><div id="passDetails"></div><canvas id="passQr"></canvas><button class="btn btn-gold" id="printPass">Print / Save pass</button></div></div>
+<div class="modal" id="adminModal" role="dialog" aria-modal="true"><div class="modal-card wide"><button class="close" data-close="adminModal">×</button><span class="kicker">AUTHORIZED ACCESS</span><h2>Event <em>management.</em></h2><div id="adminContent"></div></div></div>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
